@@ -12,7 +12,8 @@ namespace AhkWrapper
             int FirstOpenPar = CodeLine.IndexOf( '(' );
 
             // Check if it's a command versus a function
-            bool IsCommand = (FirstComma < FirstOpenPar) || (FirstOpenPar == -1); //|| (FirstComma == -1);
+            bool IsCommand = (FirstComma < FirstOpenPar || FirstOpenPar == -1) && FirstComma != -1; //|| (FirstComma == -1);
+
 
             // Check if it's a traditional assignment
             //  Example: Var = Literal Value

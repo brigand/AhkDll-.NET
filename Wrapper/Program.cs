@@ -9,19 +9,11 @@ namespace ConsoleApplication1
 
             AhkDll.ThreadFromText( "" );
 
-            string action = "var := 300";
-
-            Console.WriteLine( action );
-
-            Console.WriteLine( AhkDll.Exec( action ) );
-
-            /*
-            string CodeLine = "msgbox := val";
-
-            Console.WriteLine( "{0} is an expression = {1}", CodeLine, AhkCode.IsExpression( CodeLine ) );
-
-            */
-
+            while (true)
+            {
+                string action = Console.ReadLine();
+                Console.WriteLine("Responce: {0}", AhkCode.IsExpression(action));
+            }
 
             Console.ReadKey();
              
