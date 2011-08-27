@@ -2,7 +2,7 @@
 
 namespace AhkWrapper
 {
-    class AhkCode
+    public class AhkCode
     {
         public static bool IsExpression(string CodeLine) {
             // Position of the first comma

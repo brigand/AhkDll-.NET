@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using System.Reflection;
+using System.IO;
 
 namespace AhkWrapper
 {
-    public partial class AhkDll
-    {
+    public partial class AutoHotkey
+    {        
         /// <summary>
         /// Start a new thread with text from a file loaded
         /// </summary>
@@ -51,7 +53,7 @@ namespace AhkWrapper
             // following lines of code.
             const string prefix = "A_LASTRETURN := ";
             AhkDllFlat.ahkExec( prefix + Code );
-            return AhkDll.Var["A_LASTRETURN"];
+            return AutoHotkey.Var["A_LASTRETURN"];
         }
 
         /// <summary>
@@ -67,7 +69,7 @@ namespace AhkWrapper
         /// Get the string representation of a variable as reported by AutoHotkey
         /// </summary>
         /// <param name="VarName">The name of the variable to ask for</param>
-        /// <returns>The variables value, or a blank string if unset</returns>
+        /// <returns>The variable's value, or a blank string if unset</returns>
         public static string GetVar(string VarName) {
             // Get a pointer to the variable
             IntPtr p = AhkDllFlat.ahkgetvar( VarName, false );
@@ -98,55 +100,5 @@ namespace AhkWrapper
                 return _configurationManager;
             }
         }
-    }
-    
-    /// <summary>
-    /// These functions serve as a flat wrapper for AutoHotkey.dll.
-    /// They assume AutoHotkey.dll is in the same directory as your
-    /// executable.  
-    /// </summary>
-    public class AhkDllFlat
-    {
-        private const string DLLPATH = "AutoHotkey.dll";
-
-        [DllImport( DLLPATH, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl )]
-        public static extern uint ahkdll(string Path, string Options, string Parameters);
-
-        [DllImport( DLLPATH, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl )]
-        public static extern bool ahkExec(string code);
-
-        [DllImport( DLLPATH, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl )]
-        public static extern void addScript(string code, byte execute );
-
-        // Constant values for the execute parameter of addScript
-        public struct Execute
-        {
-            public const byte Add = 0, Run = 1, RunWait = 2;
-        }      
-
-        [DllImport( DLLPATH, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl )]
-        public static extern uint ahktextdll(string Code, string Options, string Parameters);
-
-        [DllImport( DLLPATH, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl )]
-        public static extern bool ahkReady();
-
-
-        [DllImport( DLLPATH, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl )]
-        public static extern uint addFile(string FilePath, byte AllowDuplicateInclude, byte IgnoreLoadFailure);
-
-        /* ahkLabel and ahkFunction should be added
-           but they're not a priority */
-
-        [DllImport( DLLPATH, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl )]
-        public static extern bool ahkassign(string VariableName, string NewValue);
-
-        [DllImport( DLLPATH, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl )]
-        public static extern IntPtr ahkgetvar(string VariableName, bool GetPointer);
-
-        [DllImport( DLLPATH, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl )]
-        public static extern void ahkTerminate(bool ForceKill);
-
-        [DllImport( DLLPATH, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl )]
-        public static extern void ahkReload();
     }
 }

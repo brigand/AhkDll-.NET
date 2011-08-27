@@ -1,5 +1,9 @@
-C:\Users\User\Documents\AutoHotkey\DLL\Wrapper\Wrapper\bin\Debug\Wrapper.exe
 C:\Users\User\Documents\AutoHotkey\DLL\Wrapper\Wrapper\bin\Debug\Wrapper.pdb
 C:\Users\User\Documents\AutoHotkey\DLL\Wrapper\Wrapper\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\User\Documents\AutoHotkey\DLL\Wrapper\Wrapper\obj\x86\Debug\Wrapper.exe
 C:\Users\User\Documents\AutoHotkey\DLL\Wrapper\Wrapper\obj\x86\Debug\Wrapper.pdb
+C:\Users\User\Documents\AutoHotkey\DLL\Wrapper\Wrapper\bin\Debug\Wrapper.dll.config
+C:\Users\User\Documents\AutoHotkey\DLL\Wrapper\Wrapper\bin\Debug\Wrapper.dll
+C:\Users\User\Documents\AutoHotkey\DLL\Wrapper\Wrapper\obj\x86\Debug\Wrapper.dll
+C:\Users\User\Documents\AutoHotkey\DLL\Wrapper\Wrapper\obj\x86\Debug\AhkWrapper.Properties.Resources.resources
+C:\Users\User\Documents\AutoHotkey\DLL\Wrapper\Wrapper\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\User\Documents\AutoHotkey\DLL\Wrapper\Wrapper\obj\x86\Debug\GenerateResource.write.1.tlog

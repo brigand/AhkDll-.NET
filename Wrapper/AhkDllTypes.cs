@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace AhkWrapper
 {
-    partial class AhkDll
+    partial class AutoHotkey
     {
         public class Thread
         {
@@ -27,10 +27,10 @@ namespace AhkWrapper
     {
         public string this[string VarName] {
             get {
-                return AhkDll.GetVar(VarName);
+                return AutoHotkey.GetVar(VarName);
             }
             set {
-                AhkDll.SetVar( VarName, value );
+                AutoHotkey.SetVar( VarName, value );
             }
         }
     }

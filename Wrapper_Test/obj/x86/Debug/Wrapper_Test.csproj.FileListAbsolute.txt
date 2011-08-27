@@ -1,0 +1,7 @@
+C:\Users\User\Documents\AutoHotkey\DLL\Wrapper\Wrapper_Test\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\User\Documents\AutoHotkey\DLL\Wrapper\Wrapper_Test\bin\Debug\Wrapper_Test.exe
+C:\Users\User\Documents\AutoHotkey\DLL\Wrapper\Wrapper_Test\bin\Debug\Wrapper_Test.pdb
+C:\Users\User\Documents\AutoHotkey\DLL\Wrapper\Wrapper_Test\bin\Debug\Wrapper.dll
+C:\Users\User\Documents\AutoHotkey\DLL\Wrapper\Wrapper_Test\bin\Debug\Wrapper.pdb
+C:\Users\User\Documents\AutoHotkey\DLL\Wrapper\Wrapper_Test\obj\x86\Debug\Wrapper_Test.exe
+C:\Users\User\Documents\AutoHotkey\DLL\Wrapper\Wrapper_Test\obj\x86\Debug\Wrapper_Test.pdb
