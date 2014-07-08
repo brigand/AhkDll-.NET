@@ -1,6 +1,4 @@
-I'll put something here later.  Until then you can email me with any questions: f.bagnardi@gmail.com
-
-- Frankie Bagnardi
+This project is no longer being maintained (since 2011).
 
 Copyright (c) 2011 Frankie Bagnardi
 
